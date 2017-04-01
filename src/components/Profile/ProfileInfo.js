@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {
-  View,
-  Text
+    View,
+    Text,
+    StyleSheet
 } from 'react-native';
+import ProfileSectionHeader from './ProfileSectionHeader'
 
 export default class ProfileInfo extends Component {
 
-  render() {
-    return (
-      <View>
-        <Text>Profile info</Text>
-      </View>
-    )
-  }
+    render() {
+        return (
+            <ProfileSectionHeader title="Profile info"/>
+        )
+    }
 
 }

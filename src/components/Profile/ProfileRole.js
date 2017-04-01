@@ -3,14 +3,13 @@ import {
   View,
   Text
 } from 'react-native';
+import ProfileSectionHeader from './ProfileSectionHeader'
 
 export default class ProfileRole extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Profile role</Text>
-      </View>
+      <ProfileSectionHeader title="Profile role"/>
     )
   }
 
