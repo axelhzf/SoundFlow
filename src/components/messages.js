@@ -17,7 +17,7 @@ import {
   Navigator
 } from 'react-native';
 
-import Nav from './global-widgets/nav'
+import Nav from './Navigation/Navigation';
 import convos from './../data/users'
 
 var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});

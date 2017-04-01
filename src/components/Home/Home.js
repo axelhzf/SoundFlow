@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import Nav from '../global-widgets/nav'
+import Nav from '../Navigation/Navigation';
 import SwipeCards from '../SwipeCards';
 import users from '../../data/users';
 import Card from './Card';
@@ -52,7 +52,12 @@ export default class Home extends Component {
           renderNoMoreCards={() => this.noMore()}
           handleYup={this.handleYup}
           handleNope={this.handleNope} />
-        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 150 }}>
+        <View style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: 150
+        }}>
           <TouchableOpacity style={styles.noButton} onPress={() => this.nope()}>
             <Icon name="microphone-slash" size={30} color={colors.pink} />
           </TouchableOpacity>

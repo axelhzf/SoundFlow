@@ -12,7 +12,8 @@ import Profile from './Profile/Profile';
 import Chat from './chat';
 
 export default class Index extends Component {
-  renderScene(route, navigator) {
+
+  renderScene = (route, navigator) => {
     var routeId = route.id;
     if (routeId === 'home') {
       return (
@@ -44,7 +45,7 @@ export default class Index extends Component {
           {...this.props}
           userData={route.userData}
           navigator={navigator}
-          messages={users[0].messages}/>
+          messages={users[0].messages} />
       );
     }
   }
@@ -56,7 +57,7 @@ export default class Index extends Component {
           style={{ flex: 1 }}
           ref={'NAV'}
           initialRoute={{ id: 'home', name: 'home' }}
-          renderScene={this.renderScene.bind(this)} />
+          renderScene={this.renderScene} />
       </View>
     )
   }

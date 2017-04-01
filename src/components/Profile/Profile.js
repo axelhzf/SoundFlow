@@ -4,7 +4,7 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
-import Nav from '../global-widgets/nav';
+import Nav from '../Navigation/Navigation';
 import ProfileInfo from './ProfileInfo';
 import ProfileRole from './ProfileRole';
 import ProfileGenres from './ProfileGenres';

@@ -1,5 +1,5 @@
 var colors = {
-  pink: '#ff8484',
+  pink: '#BF7A6B',
   grey: '#444',
 };
 

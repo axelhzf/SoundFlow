@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import Nav from './global-widgets/nav'
+import Nav from './Navigation/Navigation';
 import { GiftedChat } from 'react-native-gifted-chat'
 
 class chat extends Component {
