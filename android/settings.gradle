@@ -1,0 +1,3 @@
+rootProject.name = 'SoundFlow'
+
+include ':app'
