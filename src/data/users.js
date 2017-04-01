@@ -6,14 +6,22 @@ const users = [
     song: 'https://mp3l.jamendo.com/?trackid=1378575&format=mp31',
     messages: [
       {
+        _id: 3,
+        text: 'I think your voice is perfect for a song I have in mind',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 22, 0)),
+        user: {},
+      },
+      {
+        _id: 2,
+        text: 'I am looking for a singer',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 21, 0)),
+        user: {},
+      },
+      {
         _id: 1,
-        text: 'I\'ve a beautiful voice',
-        createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
-        user: {
-          _id: 2,
-          name: 'React Native',
-          avatar: 'https://randomuser.me/api/portraits/women/90.jpg',
-        },
+        text: 'Hi! My name is Grandmaster Flash',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 20, 0)),
+        user: {},
       }
     ]
   },
@@ -24,22 +32,42 @@ const users = [
     song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
     messages: [
       {
-        text: '',
-        time: '',
-        owner: 'you'
+        _id: 3,
+        text: 'are you interested?',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 22, 0)),
+        user: {},
+      },
+      {
+        _id: 2,
+        text: 'I can create some lyrics and sing with your music',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 21, 0)),
+        user: {},
+      },
+      {
+        _id: 1,
+        text: 'Hello! I really like your music',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 20, 0)),
+        user: {},
       }
     ]
   },
   {
-    name: ' Yolanda Kipling',
+    name: 'Yolanda Kipling',
     photo: require('../images/girl1.jpg'),
     rating: 3,
     song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
     messages: [
       {
-        text: '',
-        time: '',
-        owner: 'you'
+        _id: 3,
+        text: 'Your music is really professional',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 22, 0)),
+        user: {},
+      },
+      {
+        _id: 1,
+        text: 'I am looking for someone like your for a collaboration',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 20, 0)),
+        user: {},
       }
     ]
   },
@@ -50,9 +78,16 @@ const users = [
     song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
     messages: [
       {
-        text: '',
-        time: '',
-        owner: 'you'
+        _id: 2,
+        text: 'I really enjoy the last song we made together',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 21, 0)),
+        user: {},
+      },
+      {
+        _id: 1,
+        text: 'Hi man! how are you? do you wanna make another song together?',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 20, 0)),
+        user: {},
       }
     ]
   },
@@ -63,9 +98,16 @@ const users = [
     song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
     messages: [
       {
-        text: '',
-        time: '',
-        owner: 'you'
+        _id: 3,
+        text: 'I think we can make something big',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 22, 0)),
+        user: {},
+      },
+      {
+        _id: 1,
+        text: 'Your music is awesome! Do you want to create something together?',
+        createdAt: new Date(Date.UTC(2017, 4, 2, 17, 20, 0)),
+        user: {},
       }
     ]
   }

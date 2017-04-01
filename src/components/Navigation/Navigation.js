@@ -73,7 +73,7 @@ export default class Nav extends Component {
   chat() {
     return (
       <Header
-        rightIcon={ <HeaderIcon name="wechat" onPress={this.props.toMessage} />}
+        rightIcon={ <HeaderIcon name="wechat" onPress={this.props.toMessages} />}
       />
     );
   }

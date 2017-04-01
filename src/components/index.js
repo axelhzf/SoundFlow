@@ -7,9 +7,9 @@ import {
 import users from './../data/users'
 
 import Home from './Home/Home';
-import Messages from './messages';
+import Messages from './Messages/Messages';
 import Profile from './Profile/Profile';
-import Chat from './chat';
+import Chat from './Chat/Chat';
 
 export default class Index extends Component {
 
@@ -40,12 +40,13 @@ export default class Index extends Component {
       );
     }
     if (routeId === 'chat') {
+      console.log('route user', route.user);
       return (
         <Chat
           {...this.props}
-          userData={route.userData}
+          user={route.user}
           navigator={navigator}
-          messages={users[0].messages} />
+        />
       );
     }
   }
