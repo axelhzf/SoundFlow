@@ -29,6 +29,18 @@ export default class Nav extends Component {
         );
     }
 
+<<<<<<< HEAD
+    profile() {
+        return (
+            <View style={styles.container}>
+                <View style={{width: 25, height: 25, margin: 10}}/>
+                <TouchableOpacity onPress={this.props.onPress}>
+                    <Icon name="music" size={20} color={colors.pink} style={styles.rightIcon}/>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+=======
   profile() {
     console.log(this.props.toHome);return (
       <View style={styles.container}>
@@ -38,6 +50,7 @@ export default class Nav extends Component {
       </View>
     );
   }
+>>>>>>> a7b83c44979a485ef3128daf2e1f31fdbdbc8235
 
     message() {
         return (
@@ -58,7 +71,7 @@ export default class Nav extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.props.onPress}>
-                    pepe
+                    <Icon name="wechat" size={20} color={colors.pink} style={styles.leftIcon}/>
                 </TouchableOpacity>
                 {/*
                  <Image source={require('../../images/logo.png')} resizeMode="contain"
