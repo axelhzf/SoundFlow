@@ -90,19 +90,6 @@ export default class Nav extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height:60,
-    flexDirection:'row',
-    paddingTop:10,
-    justifyContent: 'space-between',
-    alignItems:'center',
-    backgroundColor: '#fff',
-    borderBottomWidth:1,
-    borderColor:'rgba(0,0,0,0.1)'
-  },
-});
-
-const styles = StyleSheet.create({
-  container: {
     height: 60,
     flexDirection: 'row',
     paddingTop: 10,
