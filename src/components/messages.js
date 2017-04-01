@@ -6,7 +6,6 @@
 
 import React, {Component} from 'react';
 import {
-
     StyleSheet,
     Image,
     Text,
@@ -18,7 +17,8 @@ import {
     Navigator
 } from 'react-native';
 
-import Nav from './global-widgets/nav';
+import Nav from './global-widgets/nav'
+import convos from './../data/users'
 
 var image1 = require('../images/image1.jpeg')
 var image2 = require('../images/image2.jpeg')
@@ -32,62 +32,8 @@ var image9 = require('../images/image9.jpeg')
 var image10 = require('../images/image10.jpeg')
 var image11 = require('../images/image11.jpeg')
 
-var convos = [
+var newMatches = [
     {
-        "id": 1,
-        "name": "Diane",
-        "message": "Suspendisse accumsan tortor quis turpis.",
-        "image": image1
-    },
-    {
-        "id": 2,
-        "name": "Lois",
-        "message": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
-        "image": image2
-    }, {
-        "id": 3,
-        "name": "Mary",
-        "message": "Duis bibendum.",
-        "image": image3
-    }, {
-        "id": 4,
-        "name": "Susan",
-        "message": "Praesent blandit.",
-        "image": image4
-    }, {
-        "id": 5,
-        "name": "Betty",
-        "message": "Mauris enim leo, rhoncus sed, vestibulum, cursus id, turpis.",
-        "image": image5
-    }, {
-        "id": 6,
-        "name": "Deborah",
-        "message": "Aliquam sit amet diam in magna bibendum imperdiet.",
-        "image": image6
-    }, {
-        "id": 7,
-        "name": "Frances",
-        "message": "Phasellus sit amet erat.",
-        "image": image7
-    }, {
-        "id": 8,
-        "name": "Joan",
-        "message": "Vestibulum ante ipsum bilia Curae; Duis faucibus accumsan odio.",
-        "image": image8
-    }, {
-        "id": 9,
-        "name": "Denise",
-        "message": "Aliquam non mauris.",
-        "image": image9
-    }, {
-        "id": 10,
-        "name": "Rachel",
-        "message": "Nulla ac enim.",
-        "image": image10
-    }
-]
-
-var newMatches = [{
     "id": 1,
     "first_name": "Sarah",
     "image": image7
@@ -142,13 +88,8 @@ export default class Messages extends Component {
         }
     }
 
-    eachPic(x) {
-        return (
-            <TouchableOpacity style={{alignItems: 'center'}}>
-                <Image source={x.image} style={{width: 70, height: 70, borderRadius: 35, margin: 10}}/>
-                <Text style={{fontWeight: '600', color: '#444'}}>{x.first_name}</Text>
-            </TouchableOpacity>
-        )
+    getLastMessage(messages) {
+        return "last message";
     }
 
     convoRender(x) {
@@ -163,12 +104,12 @@ export default class Messages extends Component {
                     borderColor: '#e3e3e3'
                 }}
                 onPress={() => this.props.navigator.replace({id: 'chat'})}>
-                <Image source={x.image} style={{width: 70, height: 70, borderRadius: 35, margin: 10}}/>
+                <Image source={{uri: x.photo}} style={{width: 70, height: 70, borderRadius: 35, margin: 10}}/>
                 <View>
                     <Text style={{fontWeight: '600', color: '#111'}}>{x.name}</Text>
                     <Text
                         numberOfLines={1}
-                        style={{fontWeight: '400', color: '#888', width: 200}}>{x.message}</Text>
+                        style={{fontWeight: '400', color: '#888', width: 200}}>{this.getLastMessage(x.messages)}</Text>
                 </View>
             </TouchableOpacity>
         )
