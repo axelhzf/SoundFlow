@@ -22,13 +22,14 @@ export default class Nav extends Component {
                  style={{ width: 100, height: 30 }} />
                  */
                 }
-                <TouchableOpacity onPress={this.props.chat}>
+                <TouchableOpacity onPress={this.props.toChat}>
                     <Icon name="wechat" size={20} color={colors.pink} style={styles.rightIcon}/>
                 </TouchableOpacity>
             </View>
         );
     }
 
+<<<<<<< HEAD
     profile() {
         return (
             <View style={styles.container}>
@@ -39,6 +40,17 @@ export default class Nav extends Component {
             </View>
         );
     }
+=======
+  profile() {
+    console.log(this.props.toHome);return (
+      <View style={styles.container}>
+        <TouchableOpacity onPress={this.props.toHome}>
+          <Icon name="music" size={20} color={colors.pink} style={styles.leftIcon}/>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+>>>>>>> a7b83c44979a485ef3128daf2e1f31fdbdbc8235
 
     message() {
         return (

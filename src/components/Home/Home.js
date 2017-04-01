@@ -54,7 +54,7 @@ export default class Home extends Component {
           handleNope={this.handleNope} />
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 150 }}>
           <TouchableOpacity style={styles.noButton} onPress={() => this.nope()}>
-            <Icon name="remove" size={30} color={colors.pink} />
+            <Icon name="microphone-slash" size={30} color={colors.pink} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.yesButton} onPress={() => this.yup()}>
             <Icon name="music" size={30} color={colors.pink} />
