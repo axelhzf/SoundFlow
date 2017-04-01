@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   commons:{
     padding:15
   },
-  buttons:{
+  button:{
     width:80, 
     height:80, 
     borderWidth:10, 
