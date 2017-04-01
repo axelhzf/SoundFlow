@@ -7,6 +7,7 @@ import {
 import Home from './home';
 import Messages from './messages';
 import Profile from './profile';
+import Chat from './chat';
 
 export default class Index extends Component {
   renderScene(route, navigator) {
@@ -30,6 +31,14 @@ export default class Index extends Component {
     if (routeId === 'profile') {
       return (
         <Profile
+          {...this.props}
+          userData={route.userData}
+          navigator={navigator} />
+      );
+    }
+    if (routeId === 'chat') {
+      return (
+        <Chat
           {...this.props}
           userData={route.userData}
           navigator={navigator} />
