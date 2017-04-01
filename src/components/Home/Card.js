@@ -10,6 +10,7 @@ import Sound from 'react-native-sound';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import colors from '../../style/colors';
 import Rating from '../Rating/Rating';
+import Equalizer from "./Equalizer";
 
 export default class Card extends Component {
 
@@ -74,7 +75,7 @@ export default class Card extends Component {
 
     return (
       <View style={styles.container}>
-        <Image source={{ uri: user.photo }} resizeMode="contain" style={styles.image} />
+        <Image source={user.photo} resizeMode="contain" style={styles.image} />
         <Text style={styles.name}>{user.name}</Text>
         { showLoading && <Text>Loading...</Text> }
         { showPause &&
@@ -87,7 +88,12 @@ export default class Card extends Component {
             <Icon name="play" size={50} color={colors.pink} />
           </TouchableOpacity>
         }
-        <Rating value={user.rating} />
+        <View style={styles.ratingContainer}>
+          <Rating value={user.rating} />
+        </View>
+        <View style={styles.ratingContainer}>
+          <Equalizer/>
+        </View>
       </View>
     );
   }
@@ -102,22 +108,19 @@ const styles = StyleSheet.create({
     height: 200
   },
   image: {
-    width: 120,
-    height: 120,
-    marginBottom: 20,
-    marginTop: 20
-  },
-  content: {
-    width: 350,
-    height: 70,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    width: 128,
+    height: 128,
+    borderRadius: 64,
+    marginBottom: 30,
+    marginTop: 50
   },
   name: {
     fontSize: 20,
     fontWeight: '300',
     color: colors.grey,
-    marginBottom: 20,
+    marginBottom: 30,
+  },
+  ratingContainer: {
+    marginTop: 30
   }
 });
