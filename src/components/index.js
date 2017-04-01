@@ -6,7 +6,7 @@ import {
 
 import Home from './Home/Home';
 import Messages from './messages';
-import Profile from './profile';
+import Profile from './Profile/Profile';
 import Chat from './chat';
 
 export default class Index extends Component {

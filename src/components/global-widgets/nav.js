@@ -22,7 +22,7 @@ export default class Nav extends Component {
          style={{ width: 100, height: 30 }} />
          */
         }
-        <TouchableOpacity onPress={this.props.chat}>
+        <TouchableOpacity onPress={this.props.toChat}>
           <Icon name="wechat" size={20} color={colors.pink} style={styles.rightIcon} />
         </TouchableOpacity>
       </View>
@@ -30,12 +30,11 @@ export default class Nav extends Component {
   }
 
   profile() {
+    console.log(this.props.toHome);
     return (
       <View style={styles.container}>
-        <View style={{width: 25, height: 25, margin: 10}}/>
-        <Image source={require('../../images/logo.png')} resizeMode="contain" style={{width: 100, height: 30}}/>
-        <TouchableOpacity onPress={this.props.onPress}>
-          <Image source={require('../../images/tinder.png')} style={{width: 25, height: 25, margin: 10}}/>
+        <TouchableOpacity onPress={this.props.toHome}>
+          <Icon name="music" size={20} color={colors.pink} style={styles.leftIcon} />
         </TouchableOpacity>
       </View>
     );
