@@ -27,7 +27,7 @@ class chat extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                <Nav type='message' onPress={() => this.props.navigator.replace({id: 'home'})}/>
+                <Nav type='chat' toMessage={() => this.props.navigator.replace({id: 'message'})} />
                 <GiftedChat
                     messages={this.state.messages}
                     onSend={this.onSend}

@@ -22,7 +22,7 @@ export default class Nav extends Component {
                  style={{ width: 100, height: 30 }} />
                  */
                 }
-                <TouchableOpacity onPress={this.props.toChat}>
+                <TouchableOpacity onPress={this.props.toMessages}>
                     <Icon name="wechat" size={20} color={colors.pink} style={styles.rightIcon}/>
                 </TouchableOpacity>
             </View>
@@ -42,7 +42,7 @@ export default class Nav extends Component {
     message() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={this.props.toHome}>
                     <Icon name="music" size={20} color={colors.pink} style={styles.leftIcon}/>
                 </TouchableOpacity>
                 {/*
@@ -57,7 +57,7 @@ export default class Nav extends Component {
     chat() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity onPress={this.props.onPress}>
+                <TouchableOpacity onPress={this.props.toMessage}>
                     <Icon name="wechat" size={20} color={colors.pink} style={styles.leftIcon}/>
                 </TouchableOpacity>
                 {/*

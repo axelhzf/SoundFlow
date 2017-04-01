@@ -27,7 +27,6 @@ export default class Messages extends Component {
     super(props)
 
     this.state = {
-      dataSource: ds.cloneWithRows(newMatches),
       convoData: ds.cloneWithRows(convos),
     }
   }
@@ -63,7 +62,7 @@ export default class Messages extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Nav type='message' onPress={() => this.props.navigator.replace({id: 'home'})}/>
+        <Nav type='message' toHome={() => this.props.navigator.replace({id: 'home'})}/>
         <ScrollView style={styles.container}>
           <View style={{margin: 10}}>
             <Text style={{color: '#da533c', fontWeight: '600', fontSize: 12}}>VOICES</Text>
