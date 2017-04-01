@@ -2984,6 +2984,10 @@ react-native-scrollable-mixin@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-scrollable-mixin/-/react-native-scrollable-mixin-1.0.1.tgz#34a32167b64248594154fd0d6a8b03f22740548e"
 
+react-native-sound@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.9.1.tgz#b14c1bc89ab3ce07655c152a3752355e389dc6e1"
+
 react-native-tab-view@^0.0.57:
   version "0.0.57"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.57.tgz#715e2ea4100fa50168e134df3947dd76ebd55743"
