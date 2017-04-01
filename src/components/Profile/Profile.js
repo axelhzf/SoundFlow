@@ -8,6 +8,7 @@ import Nav from '../global-widgets/nav';
 import ProfileInfo from './ProfileInfo';
 import ProfileRole from './ProfileRole';
 import ProfileGenres from './ProfileGenres';
+import ProfileSection from './ProfileSection';
 
 export default class Profile extends Component {
   render() {
@@ -18,9 +19,15 @@ export default class Profile extends Component {
           toHome={() => this.props.navigator.replace({ id: 'home' })}
         />
         <ScrollView style={styles.container}>
-          <ProfileInfo />
-          <ProfileRole/>
-          <ProfileGenres/>
+          <ProfileSection title="Profile">
+            <ProfileInfo />
+          </ProfileSection>
+          <ProfileSection title="Role">
+            <ProfileRole/>
+          </ProfileSection>
+          <ProfileSection title="Genres">
+            <ProfileGenres/>
+          </ProfileSection>
         </ScrollView>
       </View>
     );

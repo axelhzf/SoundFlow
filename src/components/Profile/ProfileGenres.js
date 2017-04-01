@@ -35,7 +35,7 @@ export default class ProfileStyles extends Component {
     const { genres } = this.state;
     genres[genre] = !genres[genre];
     this.setState({ genres });
-  }
+  };
 
   render() {
     const { genres } = this.state;
@@ -46,6 +46,7 @@ export default class ProfileStyles extends Component {
             active={selected}
             label={genre}
             onPress={() => this.toggleGenre(genre)}
+            key={genre}
           />
         ))}
       </View>
@@ -57,9 +58,9 @@ export default class ProfileStyles extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f7f7f7',
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
+    justifyContent: 'center'
   }
 });
