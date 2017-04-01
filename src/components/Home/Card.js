@@ -18,7 +18,7 @@ export default class Card extends Component {
   };
 
   componentDidMount() {
-    // this.loadSong();
+    //this.loadSong();
   }
 
   componentDidUpdate(prevProps) {

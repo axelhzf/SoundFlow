@@ -7,7 +7,7 @@ import {
 import Nav from '../global-widgets/nav';
 import ProfileInfo from './ProfileInfo';
 import ProfileRole from './ProfileRole';
-import ProfileStyles from './ProfileStyles';
+import ProfileGenres from './ProfileGenres';
 
 export default class Profile extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class Profile extends Component {
         <ScrollView style={styles.container}>
           <ProfileInfo />
           <ProfileRole/>
-          <ProfileStyles/>
+          <ProfileGenres/>
         </ScrollView>
       </View>
     );
