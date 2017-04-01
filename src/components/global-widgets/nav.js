@@ -45,7 +45,7 @@ export default class Nav extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.props.onPress}>
-                    <Icon name="ios-musical-notes" size={20} color={colors.pink} style={styles.leftIcon}/>
+                    <Icon name="music" size={20} color={colors.pink} style={styles.leftIcon}/>
                 </TouchableOpacity>
                 {/*
                  <Image source={require('../../images/logo.png')} resizeMode="contain"
@@ -60,7 +60,7 @@ export default class Nav extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.props.onPress}>
-                    <Icon name="wechat" size={20} color={colors.pink} style={styles.leftIcon}/>
+                    pepe
                 </TouchableOpacity>
                 {/*
                  <Image source={require('../../images/logo.png')} resizeMode="contain"
