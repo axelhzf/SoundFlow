@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     borderBottomColor: '#e3e3e3'
   },
-  buttons: {
+  button: {
     width: 80,
     height: 80,
     borderWidth: 10,

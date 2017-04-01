@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -21,7 +15,11 @@ export default class Nav extends Component {
       <TouchableOpacity onPress ={this.props.toProfile}>
         <Text>Profile</Text>
       </TouchableOpacity>
-      <Image source ={require('../../images/logo.png')} resizeMode = "contain" style={{width:100, height:30}} />
+        { /*
+          <Image source={require('../../images/logo.png')} resizeMode="contain"
+                 style={{ width: 100, height: 30 }} />
+                 */
+        }
       <TouchableOpacity onPress ={this.props.chat}>
         <Text>Chat</Text>
       </TouchableOpacity>

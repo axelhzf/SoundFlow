@@ -7,13 +7,13 @@ import {
   View
 } from 'react-native';
 import Sound from 'react-native-sound';
-
-//Sound.setCategory('Playback');
+import Icon from 'react-native-vector-icons/FontAwesome';
+import colors from '../../style/colors';
 
 export default class Card extends Component {
 
   state = {
-    loaded: false
+    loading: false
   };
 
   componentDidMount() {
@@ -55,9 +55,7 @@ export default class Card extends Component {
 
   play = () => {
     this.setState({ playing: true });
-    this.sound.play(() => {
-      console.log('playing');
-    });
+    this.sound.play();
   };
 
   pause = () => {
@@ -70,8 +68,8 @@ export default class Card extends Component {
     const { loading, playing } = this.state;
 
     const showLoading = loading;
-    const showPlay = !loading && playing;
-    const showPause = !loading && !playing;
+    const showPlay = !loading && !playing;
+    const showPause = !loading && playing;
 
     return (
       <View style={styles.container}>
@@ -80,13 +78,13 @@ export default class Card extends Component {
         <View>
           { showLoading && <Text>Loading...</Text> }
           { showPause &&
-            <TouchableOpacity style={styles.buttons} onPress={this.pause}>
-            <Text>Pause</Text>
+            <TouchableOpacity style={styles.button} onPress={this.pause}>
+              <Icon name="pause" size={50} color={colors.pink} />
             </TouchableOpacity>
           }
           { showPlay &&
-            <TouchableOpacity style={styles.buttons} onPress={this.play}>
-            <Text>Play</Text>
+            <TouchableOpacity style={styles.button} onPress={this.play}>
+              <Icon name="play" size={50} color={colors.pink} />
             </TouchableOpacity>
           }
         </View>
@@ -104,9 +102,10 @@ const styles = StyleSheet.create({
     height: 200
   },
   image: {
-    width: 50,
-    height: 50,
-    marginBottom: 30,
+    width: 120,
+    height: 120,
+    marginBottom: 20,
+    marginTop: 20
   },
   content: {
     width: 350,
@@ -118,6 +117,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     fontWeight: '300',
-    color: '#444'
+    color: colors.grey,
+    marginBottom: 20,
   }
 });

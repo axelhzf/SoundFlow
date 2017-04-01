@@ -10,7 +10,8 @@ import Nav from '../global-widgets/nav'
 import SwipeCards from '../SwipeCards';
 import users from '../../data/users';
 import Card from './Card';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
+import colors from '../../style/colors';
 
 export default class Home extends Component {
 
@@ -46,18 +47,17 @@ export default class Home extends Component {
         <SwipeCards
           ref={'swiper'}
           cards={users}
-          containerStyle={{ backgroundColor: '#ccc', alignItems: 'center', flex: 1 }}
+          containerStyle={{ alignItems: 'center', flex: 1 }}
           renderCard={(user) => <Card user={user} />}
           renderNoMoreCards={() => this.noMore()}
           handleYup={this.handleYup}
           handleNope={this.handleNope} />
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 150 }}>
-          <TouchableOpacity style={styles.buttons} onPress={() => this.nope()}>
-            <Text>Nope</Text>
+          <TouchableOpacity style={styles.noButton} onPress={() => this.nope()}>
+            <Icon name="remove" size={30} color={colors.pink} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonSmall} />
-          <TouchableOpacity style={styles.buttons} onPress={() => this.yup()}>
-            <Text>Like</Text>
+          <TouchableOpacity style={styles.yesButton} onPress={() => this.yup()}>
+            <Icon name="heart" size={30} color={colors.pink} />
           </TouchableOpacity>
         </View>
       </View>
@@ -68,25 +68,26 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f7f7f7',
   },
-  buttons: {
+  yesButton: {
     width: 80,
     height: 80,
     borderWidth: 10,
     borderColor: '#e7e7e7',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 40
+    borderRadius: 40,
+    marginLeft: 30,
   },
-  buttonSmall: {
-    width: 50,
-    height: 50,
+  noButton: {
+    width: 80,
+    height: 80,
     borderWidth: 10,
     borderColor: '#e7e7e7',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 25
+    borderRadius: 40,
+    marginRight: 30
   },
   card: {
     flex: 1,
