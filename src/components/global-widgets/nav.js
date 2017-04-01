@@ -33,9 +33,8 @@ export default class Nav extends Component {
         return (
             <View style={styles.container}>
                 <View style={{width: 25, height: 25, margin: 10}}/>
-                <Image source={require('../../images/logo.png')} resizeMode="contain" style={{width: 100, height: 30}}/>
                 <TouchableOpacity onPress={this.props.onPress}>
-                    <Image source={require('../../images/tinder.png')} style={{width: 25, height: 25, margin: 10}}/>
+                    <Icon name="music" size={20} color={colors.pink} style={styles.rightIcon}/>
                 </TouchableOpacity>
             </View>
         );
@@ -60,7 +59,7 @@ export default class Nav extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.props.onPress}>
-                    pepe
+                    <Icon name="wechat" size={20} color={colors.pink} style={styles.leftIcon}/>
                 </TouchableOpacity>
                 {/*
                  <Image source={require('../../images/logo.png')} resizeMode="contain"
