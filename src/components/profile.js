@@ -33,7 +33,7 @@ export default class Profile extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Nav type="profile" onPress={() => this.props.navigator.replace({ id: 'home' })} />
+        <Nav toHome={() => this.props.navigator.replace({ id: 'home' })} />
         <ScrollView style={styles.container}>
           <Image source={require('../images/profile.jpg')} resizeMode="stretch"
                  style={{ height: 350, width: width }} />
