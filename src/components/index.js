@@ -4,6 +4,8 @@ import {
   View
 } from 'react-native';
 
+import users from './../data/users'
+
 import Home from './Home/Home';
 import Messages from './messages';
 import Profile from './profile';
@@ -41,7 +43,8 @@ export default class Index extends Component {
         <Chat
           {...this.props}
           userData={route.userData}
-          navigator={navigator} />
+          navigator={navigator}
+          messages={users[0].messages}/>
       );
     }
   }

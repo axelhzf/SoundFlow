@@ -12,18 +12,7 @@ class chat extends Component {
 
     componentWillMount() {
         this.setState({
-            messages: [
-                {
-                    _id: 1,
-                    text: 'I\'ve a beautiful voice',
-                    createdAt: new Date(Date.UTC(2016, 7, 30, 17, 20, 0)),
-                    user: {
-                        _id: 2,
-                        name: 'React Native',
-                        avatar: 'https://facebook.github.io/react/img/logo_og.png',
-                    },
-                },
-            ],
+            messages: this.props.messages
         });
     }
 
@@ -43,7 +32,7 @@ class chat extends Component {
                     messages={this.state.messages}
                     onSend={this.onSend}
                     user={{
-                        _id: 1,
+                        _id: 1
                     }}
                 />
             </View>
