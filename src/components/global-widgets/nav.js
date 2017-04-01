@@ -6,75 +6,91 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import colors from '../../style/colors';
 
 export default class Nav extends Component {
 
-  home(){
+  home() {
     return (
-      <View  style={styles.container}>
-      <TouchableOpacity onPress ={this.props.toProfile}>
-        <Text>Profile</Text>
-      </TouchableOpacity>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={this.props.toProfile}>
+          <Icon name="user" size={20} color={colors.pink} style={styles.leftIcon} />
+        </TouchableOpacity>
         { /*
-          <Image source={require('../../images/logo.png')} resizeMode="contain"
-                 style={{ width: 100, height: 30 }} />
-                 */
+         <Image source={require('../../images/logo.png')} resizeMode="contain"
+         style={{ width: 100, height: 30 }} />
+         */
         }
-      <TouchableOpacity onPress ={this.props.chat}>
-        <Text>Chat</Text>
-      </TouchableOpacity>
-      </View>
-    );
-  }
-  profile(){
-    return (
-      <View  style={styles.container}>
-      <View style = {{width:25, height:25, margin:10}}/>
-      <Image source ={require('../../images/logo.png')} resizeMode = "contain" style={{width:100, height:30}} />
-     <TouchableOpacity onPress ={this.props.onPress}>
-      <Image source = {require('../../images/tinder.png')} style = {{width:25, height:25, margin:10}}/>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={this.props.chat}>
+          <Icon name="wechat" size={20} color={colors.pink} style={styles.rightIcon} />
+        </TouchableOpacity>
       </View>
     );
   }
 
-    message(){
+  profile() {
     return (
-      <View  style={styles.container}>
-      <TouchableOpacity onPress ={this.props.onPress}>
-      <Image source = {require('../../images/tinder.png')} style = {{width:25, height:25, margin:10}}/>
-      </TouchableOpacity>
-      <Image source ={require('../../images/logo.png')} resizeMode = "contain" style={{width:100, height:30}} />
-      <View style = {{width:25, height:25, margin:10}}/>
+      <View style={styles.container}>
+        <View style={{ width: 25, height: 25, margin: 10 }} />
+        <Image source={require('../../images/logo.png')} resizeMode="contain"
+               style={{ width: 100, height: 30 }} />
+        <TouchableOpacity onPress={this.props.onPress}>
+          <Image source={require('../../images/tinder.png')}
+                 style={{ width: 25, height: 25, margin: 10 }} />
+        </TouchableOpacity>
       </View>
     );
   }
+
+  message() {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity onPress={this.props.onPress}>
+          <Image source={require('../../images/tinder.png')}
+                 style={{ width: 25, height: 25, margin: 10 }} />
+        </TouchableOpacity>
+        <Image source={require('../../images/logo.png')} resizeMode="contain"
+               style={{ width: 100, height: 30 }} />
+        <View style={{ width: 25, height: 25, margin: 10 }} />
+      </View>
+    );
+  }
+
   render() {
-    if(this.props.type == "message"){
-        return (
-          <View>{this.message()}</View>
-        );}
-        else if (this.props.type == "profile"){
-          return (
-          <View>{this.profile()}</View>
-        );
-        }
-        else{
-        return (
-          <View>{this.home()}</View>
-        );}
+    if (this.props.type == "message") {
+      return (
+        <View>{this.message()}</View>
+      );
+    }
+    else if (this.props.type == "profile") {
+      return (
+        <View>{this.profile()}</View>
+      );
+    }
+    else {
+      return (
+        <View>{this.home()}</View>
+      );
+    }
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    height:60,
-    flexDirection:'row',
-    paddingTop:10,
+    height: 60,
+    flexDirection: 'row',
+    paddingTop: 10,
     justifyContent: 'space-between',
-    alignItems:'center',
+    alignItems: 'center',
     backgroundColor: '#fff',
-    borderBottomWidth:1,
-    borderColor:'rgba(0,0,0,0.1)'
+    borderBottomWidth: 1,
+    borderColor: 'rgba(0,0,0,0.1)'
   },
+  leftIcon: {
+    marginLeft: 10
+  },
+  rightIcon: {
+    marginRight: 10
+  }
 });
