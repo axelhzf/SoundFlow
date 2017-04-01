@@ -9,6 +9,7 @@ import {
 import Sound from 'react-native-sound';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import colors from '../../style/colors';
+import Rating from '../Rating/Rating';
 
 export default class Card extends Component {
 
@@ -75,19 +76,18 @@ export default class Card extends Component {
       <View style={styles.container}>
         <Image source={{ uri: user.photo }} resizeMode="contain" style={styles.image} />
         <Text style={styles.name}>{user.name}</Text>
-        <View>
-          { showLoading && <Text>Loading...</Text> }
-          { showPause &&
-            <TouchableOpacity style={styles.button} onPress={this.pause}>
-              <Icon name="pause" size={50} color={colors.pink} />
-            </TouchableOpacity>
-          }
-          { showPlay &&
-            <TouchableOpacity style={styles.button} onPress={this.play}>
-              <Icon name="play" size={50} color={colors.pink} />
-            </TouchableOpacity>
-          }
-        </View>
+        { showLoading && <Text>Loading...</Text> }
+        { showPause &&
+          <TouchableOpacity style={styles.button} onPress={this.pause}>
+            <Icon name="pause" size={50} color={colors.pink} />
+          </TouchableOpacity>
+        }
+        { showPlay &&
+          <TouchableOpacity style={styles.button} onPress={this.play}>
+            <Icon name="play" size={50} color={colors.pink} />
+          </TouchableOpacity>
+        }
+        <Rating value={user.rating} />
       </View>
     );
   }

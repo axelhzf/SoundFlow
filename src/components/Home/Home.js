@@ -57,7 +57,7 @@ export default class Home extends Component {
             <Icon name="remove" size={30} color={colors.pink} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.yesButton} onPress={() => this.yup()}>
-            <Icon name="heart" size={30} color={colors.pink} />
+            <Icon name="music" size={30} color={colors.pink} />
           </TouchableOpacity>
         </View>
       </View>

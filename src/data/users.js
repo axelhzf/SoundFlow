@@ -15,7 +15,7 @@ const users = [
   {
     name: 'Marie Ferguson',
     photo: 'https://randomuser.me/api/portraits/women/90.jpg',
-    rating: 3,
+    rating: 2,
     song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
     messages: [
       {
