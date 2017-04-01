@@ -42,7 +42,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Nav chat={() => this.props.navigator.replace({ id: "messages" })}
+        <Nav toMessages={() => this.props.navigator.replace({ id: "messages" })}
              toProfile={() => this.props.navigator.replace({ id: 'profile' })} />
         <SwipeCards
           ref={'swiper'}

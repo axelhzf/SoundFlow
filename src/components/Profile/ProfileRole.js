@@ -5,6 +5,7 @@ import {
   StyleSheet
 } from 'react-native';
 import Button from '../Button/Button';
+import ProfileSectionHeader from './ProfileSectionHeader'
 
 export default class ProfileRole extends Component {
 
@@ -27,6 +28,7 @@ export default class ProfileRole extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <ProfileSectionHeader title="Profile role"/>
         { this.renderButton('Producer') }
         { this.renderButton('Singer') }
       </View>
