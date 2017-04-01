@@ -9,7 +9,7 @@ import Button from '../Button/Button';
 export default class ProfileRole extends Component {
 
   state = {
-    active: 'Producer'
+    active: 'Singer'
   };
 
   renderButton(role) {
