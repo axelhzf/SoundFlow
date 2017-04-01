@@ -10,6 +10,9 @@ import colors from '../../style/colors';
 export default class Button extends Component {
 
   render() {
+    const textStyle = this.props.size === 'big'
+      ? { fontSize: 20, width: 120, textAlign: 'center' }
+      : { };
     return (
       <TouchableOpacity
         onPress={this.props.onPress}
@@ -19,7 +22,7 @@ export default class Button extends Component {
             : styles.inactiveLabel
         }
       >
-        <Text>
+        <Text style={textStyle}>
           {this.props.label}
         </Text>
       </TouchableOpacity>
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 5,
     marginBottom: 5,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
   inactiveLabel: {
     borderWidth: 1,
