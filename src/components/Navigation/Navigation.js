@@ -19,7 +19,7 @@ class Header extends Component {
         </View>
         <View style={styles.logoContainer}>
           <Image
-            source={require('../../images/logo.jpg')}
+            source={require('../../images/logo.png')}
             resizeMode="contain"
             style={styles.logo} />
         </View>
