@@ -101,7 +101,7 @@ export default class Card extends Component {
           <Rating value={user.rating} />
         </View>
         <View style={styles.ratingContainer}>
-          <Equalizer/>
+          <Equalizer active={showPause} />
         </View>
       </View>
     );

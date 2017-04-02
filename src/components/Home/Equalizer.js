@@ -9,14 +9,15 @@ import EqualizerBar from './EqualizerBar';
 export default class Equalizer extends Component {
 
   render() {
+    const { active } = this.props;
     return (
       <View style={styles.container}>
-        <EqualizerBar />
-        <EqualizerBar />
-        <EqualizerBar />
-        <EqualizerBar />
-        <EqualizerBar />
-        <EqualizerBar />
+        <EqualizerBar active={active} />
+        <EqualizerBar active={active} />
+        <EqualizerBar active={active} />
+        <EqualizerBar active={active} />
+        <EqualizerBar active={active} />
+        <EqualizerBar active={active} />
       </View>
     )
   }

@@ -21,7 +21,7 @@ export default class Equalizer extends Component {
     Animated.timing(
       this.state.step,
       {
-        toValue: 30,
+        toValue: this.props.active ? 30 : 0,
         duration: _.random(500, 1000),
       }
     ).start(this.toLow);
