@@ -15,7 +15,7 @@ export default class Rating extends Component {
             key={i}
             name="star"
             size={20}
-            color={i < value ? colors.pink: colors.grey }
+            color={i < value ? colors.pink: colors.lightGrey }
             style={styles.icon}
           />
         ))}

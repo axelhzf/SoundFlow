@@ -82,7 +82,11 @@ export default class Card extends Component {
       <View style={styles.container}>
         <Image source={user.photo} resizeMode="contain" style={styles.image} />
         <Text style={styles.name}>{user.name}</Text>
-        { showLoading && <Text>Loading...</Text> }
+        { showLoading &&
+          <View style={styles.loadingContainer}>
+            <Text>Loading...</Text>
+          </View>
+        }
         { showPause &&
           <TouchableOpacity style={styles.button} onPress={this.pause}>
             <Icon name="pause" size={50} color={colors.pink} />
@@ -124,5 +128,9 @@ const styles = StyleSheet.create({
     color: colors.grey,
   },
   ratingContainer: {
+
+  },
+  loadingContainer: {
+    height: 50
   }
 });
