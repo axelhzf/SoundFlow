@@ -82,6 +82,7 @@ export default class Card extends Component {
       <View style={styles.container}>
         <Image source={user.photo} resizeMode="contain" style={styles.image} />
         <Text style={styles.name}>{user.name}</Text>
+        <Rating value={user.rating} />
         { showLoading &&
           <View style={styles.loadingContainer}>
             <Text>Loading...</Text>
@@ -97,12 +98,7 @@ export default class Card extends Component {
             <Icon name="play" size={50} color={colors.pink} />
           </TouchableOpacity>
         }
-        <View style={styles.ratingContainer}>
-          <Rating value={user.rating} />
-        </View>
-        <View style={styles.ratingContainer}>
-          <Equalizer active={showPause} />
-        </View>
+        <Equalizer active={showPause} />
       </View>
     );
   }
@@ -115,7 +111,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-around',
-    height: 200
+    height: 200,
+    paddingTop: 30
   },
   image: {
     width: 128,
@@ -131,6 +128,9 @@ const styles = StyleSheet.create({
 
   },
   loadingContainer: {
-    height: 50
+    height: 50,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
