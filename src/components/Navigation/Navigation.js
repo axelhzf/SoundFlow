@@ -14,7 +14,7 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.icon}>
+        <View style={styles.iconContainer}>
           {this.props.leftIcon}
         </View>
         <View style={styles.logoContainer}>
@@ -23,7 +23,7 @@ class Header extends Component {
             resizeMode="contain"
             style={styles.logo} />
         </View>
-        <View style={styles.icon}>
+        <View style={styles.iconContainer}>
           {this.props.rightIcon}
         </View>
       </View>
@@ -35,7 +35,7 @@ class Header extends Component {
 class HeaderIcon extends Component {
   render() {
     return (
-      <TouchableOpacity onPress={this.props.onPress}>
+      <TouchableOpacity onPress={this.props.onPress} style={styles.icon}>
         <Icon name={this.props.name} size={20} color={colors.pink} />
       </TouchableOpacity>
     );
@@ -104,10 +104,17 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderColor: colors.pink
   },
-  icon: {
+  iconContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
     width: 60,
+  },
+  icon: {
+    width: 50,
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   logoContainer: {
     flex: 1,
