@@ -4,8 +4,6 @@ import {
   View
 } from 'react-native';
 
-import users from './../data/users'
-
 import Home from './Home/Home';
 import Messages from './Messages/Messages';
 import Profile from './Profile/Profile';
@@ -57,7 +55,7 @@ export default class Index extends Component {
         <Navigator
           style={{ flex: 1 }}
           ref={'NAV'}
-          initialRoute={{ id: 'home', name: 'home' }}
+          initialRoute={{ id: 'profile', name: 'profile' }}
           renderScene={this.renderScene} />
       </View>
     )

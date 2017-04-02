@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   icon: {
     flexDirection: 'row',
     justifyContent: 'center',
-    width: 50
+    width: 60,
   },
   logoContainer: {
     flex: 1,

@@ -3,7 +3,7 @@ const users = [
     name: 'Grandmaster Flash',
     photo: require('../images/flash.jpg'),
     rating: 4,
-    song: 'https://mp3l.jamendo.com/?trackid=1378575&format=mp31',
+    song: 'https://mp3l.jamendo.com/?trackid=1018445&format=mp31',
     messages: [
       {
         _id: 3,
@@ -29,7 +29,7 @@ const users = [
     name: 'Mylene Cruz',
     photo: require('../images/mylene.jpg'),
     rating: 3,
-    song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
+    song: 'https://mp3l.jamendo.com/?trackid=1180593&format=mp31',
     messages: [
       {
         _id: 3,
@@ -55,7 +55,7 @@ const users = [
     name: 'Yolanda Kipling',
     photo: require('../images/girl1.jpg'),
     rating: 3,
-    song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
+    song: 'https://mp3l.jamendo.com/?trackid=1421134&format=mp31',
     messages: [
       {
         _id: 3,
@@ -75,7 +75,7 @@ const users = [
     name: 'Marcus "Dizzee" Kipling',
     photo: require('../images/jayden.jpg'),
     rating: 3,
-    song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
+    song: 'https://mp3l.jamendo.com/?trackid=1364755&format=mp31',
     messages: [
       {
         _id: 2,
@@ -95,7 +95,7 @@ const users = [
     name: 'Regina',
     photo: require('../images/girl2.jpg'),
     rating: 3,
-    song: 'https://mp3l.jamendo.com/?trackid=1414987&format=mp31',
+    song: 'https://mp3l.jamendo.com/?trackid=1180599&format=mp31',
     messages: [
       {
         _id: 3,

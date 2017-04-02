@@ -14,12 +14,14 @@ import Equalizer from "./Equalizer";
 
 export default class Card extends Component {
 
+  mounted = true;
+
   state = {
     loading: false
   };
 
   componentDidMount() {
-    //this.loadSong();
+    this.loadSong();
   }
 
   componentDidUpdate(prevProps) {
@@ -36,6 +38,8 @@ export default class Card extends Component {
     const { user } = this.props;
     this.setState({ loading: true });
     this.sound = new Sound({ uri: user.song }, (error) => {
+      if (!this.mounted) return;
+
       this.setState({ loading: false });
       if (error) {
         console.log('failed to load the sound', error);
@@ -52,6 +56,7 @@ export default class Card extends Component {
   }
 
   componentWillUnmount() {
+    this.mounted = false;
     this.releaseSong();
   }
 
@@ -103,24 +108,21 @@ export default class Card extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     alignItems: 'center',
-    alignSelf: 'center',
+    justifyContent: 'space-around',
     height: 200
   },
   image: {
     width: 128,
     height: 128,
     borderRadius: 64,
-    marginBottom: 30,
-    marginTop: 50
   },
   name: {
     fontSize: 20,
     fontWeight: '300',
     color: colors.grey,
-    marginBottom: 30,
   },
   ratingContainer: {
-    marginTop: 30
   }
 });
